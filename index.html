@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <img src="logo.png" class="logo" alt="logo image">
+            <h2>CEBU TECHNOLOGICAL UNIVERSITY - DANAO CAMPUS</h2>
+        </nav>
+    </div>
+
+    <div class="flex-container">
+        
+    <div class="container">
+        <h1>DIFFERENTIAL EQUATION CLASSIFIER</h1>
+        <h3>What to know?</h3>
+        <img src="topic1.png">
+        <img src="topic 2.png">
+
+        <div class="classifier">
+            <form action="process_equation.php" method="POST">
+                <input type="text" name="equation" placeholder="Enter your equation" required>
+                <input type="submit" value="Classify">
+            </form>
+            <div id="result"></div> 
+        </div>
+    </div>
+    
+
+<!-- Growth and Decay Solver -->
+<div class="container">
+    <h1>Application of Separable Variables</h1>
+
+    <!-- Definition Section -->
+    <div class="definition">
+        <h1>Growth and Decay</h1>
+        <h2>Definition</h2>
+        <p>Growth and decay describe the processes by which quantities either increase or decrease over time. These phenomena are often represented using first-order differential equations, which link the rate of change of a quantity to the quantity itself.</p>
+        <p><strong>P(t) = P<sub>0</sub>e<sup>kt</sup></strong></p>
+        <ul>
+            <li><strong>P(t)</strong> = population at time t</li>
+            <li><strong>P<sub>0</sub></strong> = initial population</li>
+            <li><strong>e</strong> = the base of the natural logarithm (~2.718)</li>
+            <li><strong>k</strong> = growth or decay rate</li>
+            <li><strong>t</strong> = time</li>
+        </ul>
+    </div>
+
+    <!-- Calculator Section -->
+    <div class="calculator">
+        <h2>Calculator</h2>
+        <label for="t0-growth">t<sub>0</sub> (initial time):</label>
+        <input type="number" id="t0-growth" value="0"><br>
+
+        <label for="p0">P<sub>0</sub> (initial population):</label>
+        <input type="number" id="p0-growth"><br>
+
+        <label for="t1-growth">t<sub>1</sub> (later time):</label>
+        <input type="number" id="t1-growth"><br>
+
+        <label for="p1-growth">P<sub>1</sub> (population at t<sub>1</sub>):</label>
+        <input type="number" id="p1-growth"><br>
+
+        <label for="t_req-growth">t<sub>req</sub> (time for prediction):</label>
+        <input type="number" id="t_req-growth"><br>
+
+        <button id="solve-growth">Solve</button>
+        <button id="clear-growth">Clear</button>
+    </div>
+
+    <!-- Solution Display -->
+    <div id="solution-growth" style="display:none; margin-top: 20px; padding: 10px; border: 1px solid #2f0763; background-color: #f9f9f9;">
+        <h3>Solution</h3>
+        <pre id="solution-growth-content"></pre>
+    </div>
+</div>
+
+<!-- Newton's Law of Cooling and Heating -->
+<div class="container">
+    <h1>Newton's Law of Cooling and Heating</h1>
+
+    <!-- Definition Section -->
+    <div class="definition">
+        <h2>Definition</h2>
+        <p>
+            According to Newton's law of heating and cooling, the rate at which an object gains or loses heat is influenced by the temperature difference between the object and its environment.</p>
+        <h2>Formula</h2>
+        <p><strong>T - T<sub>m</sub> = C e<sup>kt</sup></strong></p>
+        <ul>
+            <li><strong>T</strong>: Temperature of the object (for t > 0)</li>
+            <li><strong>T<sub>m</sub></strong>: Ambient temperature</li>
+            <li><strong>C</strong>: Initial temperature difference</li>
+            <li><strong>e</strong>: Base of the natural logarithm (~2.718)</li>
+            <li><strong>k</strong>: Growth or decay rate</li>
+            <li><strong>t</strong>: Time</li>
+        </ul>
+    </div>
+
+    <!-- Calculator Section -->
+    <div class="calculator">
+        <h2>Calculator</h2>
+        <label for="tm">T<sub>m</sub> (Ambient Temperature):</label>
+        <input type="number" id="tm"><br>
+
+        <label for="t0-newton">t<sub>0</sub> (Initial time):</label>
+        <input type="number" id="t0-newton" value="0"><br>
+
+        <label for="t_initial">T<sub>0</sub> (Initial temperature):</label>
+        <input type="number" id="t_initial"><br>
+
+        <label for="t1-newton">t<sub>1</sub> (Later time):</label>
+        <input type="number" id="t1-newton"><br>
+
+        <label for="t1_temp">T<sub>1</sub> (Temperature at t<sub>1</sub>):</label>
+        <input type="number" id="t1_temp"><br>
+
+        <label for="t_req-newton">t<sub>req</sub> (Time for prediction):</label>
+        <input type="number" id="t_req-newton"><br>
+
+        <button id="solve-newton">Solve</button>
+        <button id="clear-newton">Clear</button>
+    </div>
+
+    <!-- Solution Display -->
+    <div id="solution-newton" style="display:none; margin-top: 20px; padding: 10px; border: 1px solid #2f0763; background-color: #f9f9f9;">
+        <h3>Solution</h3>
+        <pre id="solution-newton-content"></pre>
+    </div>
+</div>
+
+<div class="copyright">
+        <ul>
+            <li><img src="mian.png" alt="User  Image"></li>
+            <li><a href="#">MARY ANN G. MONTERO</a></li>
+            <li><img src="subject.png" alt="Subject Icon"></li>
+            <li><a href="#">EMATH 213: DIFFERENTIAL EQUATION</a></li>
+            <li><img src="teacher.jpg" alt="Teacher Icon"></li>
+            <li><a href="#">ENGR. RAMEL H. SIGUE</a></li>
+        </ul>
+    </div>
+    
+
+    <script src="script.js"></script> 
+</body>
+</html>
